@@ -14,7 +14,6 @@ public class Nationality {
     @SerializedName("country")
     private List<Country> countries;
 
-
     @Data
     public static class Country {
         private String countryId;
