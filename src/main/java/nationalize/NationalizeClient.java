@@ -8,7 +8,6 @@ import feign.RequestLine;
 import feign.gson.GsonDecoder;
 
 public interface NationalizeClient {
-
     @RequestLine("GET /?name={name}")
     Nationality getNationality(@Param("name") String name);
 
@@ -19,5 +18,4 @@ public interface NationalizeClient {
                         .create()))
                 .target(NationalizeClient.class, "https://api.nationalize.io/");
     }
-
 }
